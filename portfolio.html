@@ -7,19 +7,120 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <link rel="stylesheet" href="pub/css/style.css">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Tangerine:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <style>
+    #triangle::before {
+      content: "";
+      height: 100px;
+      background: #efe;
+      position: absolute;
+      top: -195px;
+    }
+    </style>
   </head>
   <body style="text-align: center;
     font-family: 'Open Sans';">
+    <div style="width: 0;
+    height: 0;
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    border-bottom: 100px solid white;
+    position: relative;
+    top: 52px;
+    z-index: -1;
+    margin: 0 auto;"></div>
+    <div style="
+    background-color: #dfe;
+    height: 100px;
+    position: absolute;
+    width: 100%;
+    z-index: -4;
+    top: 0px;"></div>
     <div style="
     margin-top: 60px;
     letter-spacing: 11px;
     line-height: 1;
     font-weight: 300;">brandon</div>
     <div style="
+    color: #333;
     font-size: 48px;
     font-weight: 300;
     letter-spacing: 10px;
     line-height: 1;">CHAI</div>
-    <script src="//localhost:35729/livereload.js"></script>
+    <div style="
+    line-height: 6;
+    font-size: 12px;
+    letter-spacing: 1px;">DESIGNER x DEVELOPER</div>
+<!--     <div style="
+    background-color: #f7f7f7;
+    margin-top: 16px;
+    letter-spacing: 10px;
+    color: #bbb;
+    font-style: italic;
+    font-size: 13px;
+    line-height: 3;
+    width: 136px;
+    margin: 0 auto;">skills</div> -->
+    <div style="
+    display: flex;
+    justify-content: space-around;
+    width: 511px;
+    margin: 46px auto 0;">
+      <div style="display:flex;flex-direction:column">
+        <div style="line-height: 6;
+        letter-spacing: 2px;
+        font-size: 12px;
+        padding: 0 32px;">HTML &amp; CSS</div>
+        <i class="ion-ios-arrow-thin-down" style="font-size: 28px;color: #dfe;"></i>
+      </div>
+      <div style="display:flex;flex-direction:column">
+        <div style="line-height: 6;
+        letter-spacing: 2px;
+        font-size: 12px;
+        padding: 0 32px;">Adobe Creative Suite</div>
+        <i class="ion-ios-arrow-thin-down" style="font-size: 28px;color: #dfe;"></i>
+      </div>
+      <div style="display:flex;flex-direction:column">
+        <div style="line-height: 6;
+        letter-spacing: 2px;
+        font-size: 12px;
+        padding: 0 32px;">Javascript</div>
+        <i class="ion-ios-arrow-thin-down" style="font-size: 28px;color: #dfe;"></i>
+      </div>
+    </div>
+    <div style="height: 150px;
+    width: 100%;
+    z-index: -4;
+    margin-top: 50px;
+    background-color: #dfe;"></div>
+    <div style="
+    width: 0;
+    height: 0;
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    border-top: 100px solid white;
+    position: relative;
+    bottom: 192px;
+    z-index: 1;
+    margin: 0 auto;"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
+    <script>
+    $("<style type='text/css' id='dynamic' />").appendTo("head");
+    resizeTriangle()
+    $(window).resize(function() {
+      resizeTriangle()
+    });
+    function resizeTriangle() {
+      var page = $("html")
+      var height = page.width() / 5.9
+      var top = height * 7.5
+      $("#dynamic").text(
+        "#triangle:before { width:" + page.width() + "px;" + "height:" + height + "px;} #triangle {top:" + top + "px;}"
+      )
+      $('#triangle').css("border-right", page.width() + "px solid transparent")
+    }
+    </script>
   </body>
 </html>
