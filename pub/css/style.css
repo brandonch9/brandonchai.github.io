@@ -46,3 +46,20 @@ h2 {
   margin: 0;
   font-size: 2em;
   line-height: 1; }
+
+.home-page-title {
+  color: #32272f;
+  font-family: 'Open Sans', sans-serif;
+  letter-spacing: 11px;
+}
+
+.hero-image {
+  background-size: cover;
+}
+
+.fake-img {
+  background-color: honeydew;
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+}

@@ -20,20 +20,18 @@ module.exports = function (grunt) {
 			}
 		},
 		watch: {
+		  options: {
+		  	livereload: true,
+		  },
 		  sass: {
-		    files: ['pub/css/**/*.sass'],
+		    files: 'pub/css/**/*.sass',
 		    tasks: ['sass', 'autoprefixer'],
 		  }
-		},	  
-		livereloadx: {
-      		static: true,
-      		dir: '.'
-    	}
+		}  
 	});
 
 	grunt.loadNpmTasks('grunt-autoprefixer');
-	grunt.loadNpmTasks('livereloadx');
 	grunt.loadNpmTasks('grunt-contrib-sass');
 	grunt.loadNpmTasks('grunt-contrib-watch');
-	grunt.registerTask('default', ['sass', 'autoprefixer', 'livereloadx', 'watch']);
+	grunt.registerTask('default', ['sass', 'autoprefixer', 'watch']);
 };
