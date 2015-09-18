@@ -1,0 +1,119 @@
+<html lang='en'>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>b y r s o n  t i l l e r</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link href='https://fonts.googleapis.com/css?family=Arvo:400,700' rel='stylesheet' type='text/css'>
+    <style>
+      .col-1 {
+        width: 320px;
+        margin: 0 auto;
+        font-family: 'Arvo'
+      }
+      .container {
+        width: 238px;
+        margin: 0 auto;
+      }
+      .header {
+        width: 100%;
+        height: 100px;
+        display: flex;
+      }
+      .box-1 {
+        text-align: center;
+        line-height: 100px;
+        width: 138px;
+        border: 4px solid black;
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 24px;
+      }
+      .box-2 {
+        border: 4px solid black;
+        border-left: 0;
+        width: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .box-2-content {
+        line-height: 1;
+      }
+      .embed-responsive {
+        position:relative;
+        display:block;
+        height:0;
+        padding:0;
+        overflow:hidden
+      }
+      .embed-responsive .embed-responsive-item,.embed-responsive embed,.embed-responsive iframe,.embed-responsive object,.embed-responsive video {
+        position:absolute;
+        top:0;
+        bottom:0;
+        left:0;
+        width:100%;
+        height:100%;
+        border:0
+      }
+      .embed-responsive-16by9 {
+        padding-bottom:56.25%
+      }
+      .embed-responsive-4by3
+      {
+        padding-bottom:75%
+      }
+      .vid-container {
+        margin-top: 24px;
+        overflow: visible;
+      }
+      .track-num {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        border: 4px solid pink;
+        z-index: 4;
+        color: pink;
+        font-size: 44px;
+        box-sizing: border-box;
+        padding-left: 5px;
+        line-height: 1;
+        top: -10px;
+        left: 20px;
+      }
+      .track-name {
+        letter-spacing: 6px;
+        z-index: 4;
+        color: pink;
+        position: absolute;
+        left: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        text-transform: uppercase;
+        font-weight: 700;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="col-1">
+      <div class="container">
+        <div class="header">
+          <div class="box-1">videos</div>
+          <div class="box-2">
+            <div class="box-2-content">videos<br>videos<br>videos</div>
+          </div>
+        </div>
+        <div class="vid-container embed-responsive embed-responsive-16by9">
+          <div class="track-num">1</div>
+          <div class="track-name">Dont</div>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/SJR_8MFkULw?showinfo=0" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="vid-container embed-responsive embed-responsive-16by9">
+          <div class="track-num">2</div>
+          <div class="track-name">Dont</div>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/SJR_8MFkULw?showinfo=0" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

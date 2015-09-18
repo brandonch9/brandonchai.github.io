@@ -7,16 +7,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <link rel="stylesheet" href="pub/css/style.css">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Tangerine:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <style>
-    #triangle::before {
-      content: "";
-      height: 100px;
-      background: #efe;
-      position: absolute;
-      top: -195px;
+
+    body{
+        min-width: 320px;
     }
+    .skills-section{
+        display: flex;
+        flex-direction:column;
+        justify-content: space-around;
+        width: 320px;
+        margin: 46px auto 0;
+    }
+
+    @media (min-width: 560px) {
+        .skills-section {
+            flex-direction: row;
+            width: 511px;
+        }
+    }
+
     </style>
   </head>
   <body style="text-align: center;
@@ -38,35 +49,25 @@
     z-index: -4;
     top: 0px;"></div>
     <div style="
+    visibility: hidden;
     margin-top: 60px;
-    letter-spacing: 11px;
-    line-height: 1;
-    font-weight: 300;">brandon</div>
+    letter-spacing: 19px;
+    line-height: 2;
+    font-weight: 300;
+    font-size: 14px;
+    margin-left: 11px;">brandon</div>
     <div style="
     color: #333;
     font-size: 48px;
     font-weight: 300;
-    letter-spacing: 10px;
-    line-height: 1;">CHAI</div>
+    letter-spacing: 28px;
+    line-height: 1;
+    margin-left: 22px;">CHAI</div>
     <div style="
     line-height: 6;
     font-size: 12px;
     letter-spacing: 1px;">DESIGNER x DEVELOPER</div>
-<!--     <div style="
-    background-color: #f7f7f7;
-    margin-top: 16px;
-    letter-spacing: 10px;
-    color: #bbb;
-    font-style: italic;
-    font-size: 13px;
-    line-height: 3;
-    width: 136px;
-    margin: 0 auto;">skills</div> -->
-    <div style="
-    display: flex;
-    justify-content: space-around;
-    width: 511px;
-    margin: 46px auto 0;">
+    <div class="skills-section">
       <div style="display:flex;flex-direction:column">
         <div style="line-height: 6;
         letter-spacing: 2px;
@@ -104,23 +105,6 @@
     bottom: 192px;
     z-index: 1;
     margin: 0 auto;"></div>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
-    <script>
-    $("<style type='text/css' id='dynamic' />").appendTo("head");
-    resizeTriangle()
-    $(window).resize(function() {
-      resizeTriangle()
-    });
-    function resizeTriangle() {
-      var page = $("html")
-      var height = page.width() / 5.9
-      var top = height * 7.5
-      $("#dynamic").text(
-        "#triangle:before { width:" + page.width() + "px;" + "height:" + height + "px;} #triangle {top:" + top + "px;}"
-      )
-      $('#triangle').css("border-right", page.width() + "px solid transparent")
-    }
-    </script>
   </body>
 </html>
