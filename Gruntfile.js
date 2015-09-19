@@ -7,15 +7,18 @@ module.exports = function (grunt) {
 			options: {
 				browsers: ['last 2 versions']
 			},
-			single_file: {
-                src: 'pub/css/style.css',
-                dest: 'pub/css/style.css'
-            }
+			multiple_files: {
+					expand: true,
+					flatten: true,
+					src: 'pub/css/*.css',
+					dest: 'pub/css/'
+			}
 		},
 		sass: {
 			dist: {
 				 files: {
-				 	 'pub/css/style.css' : 'pub/css/style.sass'
+				 	 'pub/css/style.css' : 'pub/css/style.sass',
+					 'pub/css/brysontiller.css' : 'pub/css/brysontiller.sass'
 				 }
 			}
 		},
@@ -27,7 +30,7 @@ module.exports = function (grunt) {
 		    files: 'pub/css/**/*.sass',
 		    tasks: ['sass', 'autoprefixer'],
 		  }
-		}  
+		}
 	});
 
 	grunt.loadNpmTasks('grunt-autoprefixer');
